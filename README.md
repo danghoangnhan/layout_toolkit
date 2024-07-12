@@ -19,6 +19,11 @@ pip install -e .
 
 | Model            | Model Name (Path)                                                               |
 |------------------|---------------------------------------------------------------------------------|
+| LayoutLM-Base, Uncased  |  [microsoft/layoutlm-base-uncased](https://huggingface.co/microsoft/layoutlm-base-uncased) |
+| LayoutLM-Base, Cased    |  [microsoft/layoutlm-base-cased](https://huggingface.co/microsoft/layoutlm-base-cased) |
+| LayoutLM-Large, Uncased |  [layoutlm-large-uncased](https://huggingface.co/microsoft/layoutlm-large-uncased) |
+layoutxlm-base | [microsoft/layoutxlm-base](https://huggingface.co/microsoft/layoutxlm-base)
+| layoutlmv2-base-uncased | [microsoft/layoutlmv2-base-uncased](https://huggingface.co/microsoft/layoutlmv2-base-uncased)   |
 | layoutlmv3-base  | [microsoft/layoutlmv3-base](https://huggingface.co/microsoft/layoutlmv3-base)   |
 | layoutlmv3-large | [microsoft/layoutlmv3-large](https://huggingface.co/microsoft/layoutlmv3-large) |
 | layoutlmv3-base-chinese | [microsoft/layoutlmv3-base-chinese](https://huggingface.co/microsoft/layoutlmv3-base-chinese) |
