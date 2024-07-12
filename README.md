@@ -1,4 +1,4 @@
-# LayoutLMv3 (Document Foundation Model)
+# Document Layout Toolkit
 
 ## Installation
 
