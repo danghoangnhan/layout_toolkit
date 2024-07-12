@@ -3,10 +3,10 @@
 ## Installation
 
 ``` bash
-conda create --name layoutlmv3 python=3.7
-conda activate layoutlmv3
-git clone https://github.com/microsoft/unilm.git
-cd unilm/layoutlmv3
+conda create --name layout_toolkit python=3.7
+conda activate layout_toolkit
+git clone https://github.com/danghoangnhan/layout_toolkit
+cd layout_toolkit
 pip install -r requirements.txt
 # install pytorch, torchvision refer to https://pytorch.org/get-started/locally/
 pip install torch==1.10.0+cu111 torchvision==0.11.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
@@ -23,9 +23,6 @@ pip install -e .
 | layoutlmv3-large | [microsoft/layoutlmv3-large](https://huggingface.co/microsoft/layoutlmv3-large) |
 | layoutlmv3-base-chinese | [microsoft/layoutlmv3-base-chinese](https://huggingface.co/microsoft/layoutlmv3-base-chinese) |
 
-## Fine-tuning Examples
-
-We provide some fine-tuned models and their train/test logs.
 
 ### Form Understanding on FUNSD
 
@@ -55,31 +52,6 @@ We provide some fine-tuned models and their train/test logs.
     --output_dir /path/to/layoutlmv3-base-finetuned-funsd \
     --segment_level_layout 1 --visual_embed 1 --input_size 224 \
     --dataloader_num_workers 8
-  ```
-
-### Document Layout Analysis on PubLayNet
-
-Please follow [unilm/dit/object_detection](https://github.com/microsoft/unilm/blob/master/dit/object_detection/README.md) to prepare data and read more details about this task.
-In the folder of layoutlmv3/examples/object_detecion:
-
-* Train
-
-  Please firstly download the [pre-trained models](#pre-trained-models) to `/path/to/microsoft/layoutlmv3-base`, then run:
-
-  ``` bash
-  python train_net.py --config-file cascade_layoutlmv3.yaml --num-gpus 16 \
-          MODEL.WEIGHTS /path/to/microsoft/layoutlmv3-base/pytorch_model.bin \
-          OUTPUT_DIR /path/to/layoutlmv3-base-finetuned-publaynet
-  ```
-
-* Test
-
-  If you want to test the [layoutlmv3-base-finetuned-publaynet](https://huggingface.co/HYPJUDY/layoutlmv3-base-finetuned-publaynet) model, please download it to `/path/to/layoutlmv3-base-finetuned-publaynet`, then run:
-
-  ``` bash
-  python train_net.py --config-file cascade_layoutlmv3.yaml --eval-only --num-gpus 8 \
-          MODEL.WEIGHTS /path/to/layoutlmv3-base-finetuned-publaynet/model_final.pth \
-          OUTPUT_DIR /path/to/layoutlmv3-base-finetuned-publaynet
   ```
 
 ### Form Understanding on XFUND
